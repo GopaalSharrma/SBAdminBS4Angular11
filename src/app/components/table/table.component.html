@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <table id="tbl" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-bordered">
+        <thead>
+          <tr>
+            <th> Id</th>
+            <th> Name</th>
+            <th>UserName</th>
+            <th>EmailID</th>
+            <th>PhoneNumber</th>
+            <th>Website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of employeeList">
+            <td>{{client.id}}</td>
+            <td>{{client.name}}</td>
+            <td>{{client.username}}</td>
+            <td>{{client.email}}</td>
+            <td>{{client.phone}}</td>
+            <td>{{client.website}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
